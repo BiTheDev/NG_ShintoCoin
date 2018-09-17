@@ -1,0 +1,18 @@
+
+<table>
+  <thead>
+    <th>type</th>
+    <th>Amount</th>
+    <th>Value</th>
+    <th>action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let trans of all">
+      <td>{{trans.type}}</td>
+      <td>{{trans.amount}}</td>
+      <td>{{trans.value}}</td>
+      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/transaction/', trans.id] ">Browse Ledger</button>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

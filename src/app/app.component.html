@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand text-light" href="#">{{ title }}</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/']">Home</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/MineCoin']">Mine Coins</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/BuyCoin']">Buy Coins</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/SellCoin']">Sell Coin</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/Browse Ledger']">Browse Ledger</button>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
