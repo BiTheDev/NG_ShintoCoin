@@ -11,7 +11,7 @@ const routes: Routes = [
   {path : 'BuyCoin', component : BuyCoinComponent},
   {path : 'SellCoin', component : SellCoinComponent},
   {path : 'Browse Ledger', component : BrowseLedgerComponent},
-  {path: "transaction/:id",component :DetailComponent},
+  {path: "transaction/:name/:id",component :DetailComponent},
   {path : '', component : HomeComponent}
 ];
 
