@@ -22,9 +22,11 @@ export class SellCoinComponent implements OnInit {
       this.value = obs;
       let obs2 = this._httpService.minusCoin(this.coin);
       this.owned = obs2;
-      this.transcaction = { id : 0, type:"Sell", value: this.value , amount : this.coin }
+      let randid = Math.floor(Math.random() * 9999);      
+      this.transcaction = { id : randid, type:"Sell", value: this.value , amount : this.coin }
       this._httpService.addToTrans(this.transcaction)
       console.log(this.transcaction);
+      this.transcaction = { id : randid, type:"Sell", value: this.value , amount : this.coin }
     }
   }
 

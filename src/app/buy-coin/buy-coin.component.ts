@@ -11,7 +11,7 @@ export class BuyCoinComponent implements OnInit {
   value :number = this._httpService.Mines;
   coin: number;
   owned : number = this._httpService.TotalCoins;
-  transcaction = { id : 0, type:"Buy", value: 0 , amount : 0 }
+  transaction = { id : 0, type:"Buy", value: 0 , amount : 0 }
   ngOnInit() {
     this.value;
     this.owned;
@@ -26,9 +26,12 @@ export class BuyCoinComponent implements OnInit {
     this.value = obs;
     let obs2 = this._httpService.AddCoin(this.coin);
     this.owned = obs2;
-    this.transcaction = { id : 0, type:"Buy", value: (this.value -1 ) , amount : this.coin }
-    this._httpService.addToTrans(this.transcaction)
-    console.log(this.transcaction);
+    let randid = Math.floor(Math.random() * 9999);
+    this.transaction = { id : randid, type:"Buy", value: (this.value -1 ) , amount : this.coin }
+    this._httpService.addToTrans(this.transaction)
+    console.log(this.transaction);
+    this.transaction = { id : 0, type:"Buy", value: 0 , amount : 0 }
+
     }
     
   }
